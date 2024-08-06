@@ -26,6 +26,8 @@
     stdin: |
       kind: Cluster
       apiVersion: kind.x-k8s.io/v1alpha4
+      featureGates:
+        FeatureGateName: true
       nodes:
         - role: control-plane
           image: kindest/node:{{ k8s.version }}
